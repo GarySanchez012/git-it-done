@@ -1,6 +1,6 @@
+var repoNameEl = document.querySelector("#repo-name");
 var issueContainerEl = document.querySelector("#issues-container");
 var limitWarningEl = document.querySelector("#limit-warning");
-var repoNameEl = document.querySelector("#repo-name");
 
 var getRepoName = function () {
   //grab repo name from url query string
@@ -36,7 +36,7 @@ var getRepoIssues = function (repo) {
       });
     } else {
         //if not successful, redirect to homepage
-    //   document.location.replace("./index.html");
+      document.location.replace("./index.html");
     }
   });
 };
@@ -91,5 +91,4 @@ var displayIssues = function (issues) {
   }
 };
 
-getRepoIssues();
 getRepoName();
